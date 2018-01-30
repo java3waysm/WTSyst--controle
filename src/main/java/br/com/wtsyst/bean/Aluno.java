@@ -7,4 +7,5 @@ public class Aluno {
 	private String nomePai;
 	private Double altura;
 	private String peso;
+	private String apelido; 
 }
