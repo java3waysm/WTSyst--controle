@@ -5,5 +5,5 @@ public class Aluno {
 	private String matricula;
 	private String nomeMae;
 	private String nomePai;
-
+	private Double altura;
 }
