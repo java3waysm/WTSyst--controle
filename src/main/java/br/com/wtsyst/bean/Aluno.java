@@ -6,6 +6,7 @@ public class Aluno {
 	private String nomePai;
 	private Double altura;
 	private Double peso;
+	private String codigo;
 	
 	
 	
