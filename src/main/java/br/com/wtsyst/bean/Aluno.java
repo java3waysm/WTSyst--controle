@@ -8,7 +8,4 @@ public class Aluno {
 	private Double peso;
 	private String codigo;
 	private String matricula;
-	
-	
-	
 }
