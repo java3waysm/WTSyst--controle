@@ -11,16 +11,9 @@ public class Aluno {
 	private String codigo;
 	private String matricula;
 	private String apelido;
+	private String texto;
 	private Date nascimento;
-	private String curso;
-	
-	
-	public String getCurso() {
-		return curso;
-	}
-	public void setCurso(String curso) {
-		this.curso = curso;
-	}
+
 	public String getApelido() {
 		return apelido;
 	}
