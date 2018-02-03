@@ -1,5 +1,7 @@
 package br.com.wtsyst.bean;
 
+import java.util.Date;
+
 public class Aluno {
 	private String nome;
 	private String nomeMae;
@@ -9,12 +11,20 @@ public class Aluno {
 	private String codigo;
 	private String matricula;
 	private String apelido;
+	private Date nascimento;
 	
 	public String getApelido() {
 		return apelido;
 	}
 	public void setApelido(String apelido) {
 		this.apelido = apelido;
+	}
+
+	public Date getNascimento() {
+		return nascimento;
+	}
+	public void setNascimento(Date nascimento) {
+		this.nascimento = nascimento;
 	}
 	public String getNome() {
 		return nome;
