@@ -8,6 +8,9 @@ public class Aluno {
 	private Double peso;
 	private String codigo;
 	private String matricula;
+	private String apelido;
+	
+	
 	public String getNome() {
 		return nome;
 	}
