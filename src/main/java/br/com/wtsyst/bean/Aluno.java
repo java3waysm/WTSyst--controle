@@ -12,15 +12,7 @@ public class Aluno {
 	private String matricula;
 	private String apelido;
 	private Date nascimento;
-	private String curso;
-	
-	
-	public String getCurso() {
-		return curso;
-	}
-	public void setCurso(String curso) {
-		this.curso = curso;
-	}
+
 	public String getApelido() {
 		return apelido;
 	}
