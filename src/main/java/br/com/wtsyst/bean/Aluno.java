@@ -10,7 +10,12 @@ public class Aluno {
 	private String matricula;
 	private String apelido;
 	
-	
+	public String getApelido() {
+		return apelido;
+	}
+	public void setApelido(String apelido) {
+		this.apelido = apelido;
+	}
 	public String getNome() {
 		return nome;
 	}
