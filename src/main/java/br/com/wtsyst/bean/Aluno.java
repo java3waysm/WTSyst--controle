@@ -1,67 +1,27 @@
 package br.com.wtsyst.bean;
 
-import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
+@Entity
+@SequenceGenerator(name = "seq_aluno", sequenceName = "aluno_seq", initialValue = 1, allocationSize = 1)
 public class Aluno {
+	
+	@Id
+	@GeneratedValue(strategy = 
+	GenerationType.SEQUENCE, generator = "seq_aluno")
+	private Integer id;
 	private String nome;
-	private String nomeMae;
-	private String nomePai;
-	private Double altura;
-	private Double peso;
-	private String codigo;
 	private String matricula;
-	private String apelido;
-	private String texto;
-	private Date nascimento;
-
-	public String getApelido() {
-		return apelido;
-	}
-	public void setApelido(String apelido) {
-		this.apelido = apelido;
-	}
-
-	public Date getNascimento() {
-		return nascimento;
-	}
-	public void setNascimento(Date nascimento) {
-		this.nascimento = nascimento;
-	}
+	
 	public String getNome() {
 		return nome;
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-	public String getNomeMae() {
-		return nomeMae;
-	}
-	public void setNomeMae(String nomeMae) {
-		this.nomeMae = nomeMae;
-	}
-	public String getNomePai() {
-		return nomePai;
-	}
-	public void setNomePai(String nomePai) {
-		this.nomePai = nomePai;
-	}
-	public Double getAltura() {
-		return altura;
-	}
-	public void setAltura(Double altura) {
-		this.altura = altura;
-	}
-	public Double getPeso() {
-		return peso;
-	}
-	public void setPeso(Double peso) {
-		this.peso = peso;
-	}
-	public String getCodigo() {
-		return codigo;
-	}
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
 	}
 	public String getMatricula() {
 		return matricula;
@@ -69,4 +29,5 @@ public class Aluno {
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
+	
 }
