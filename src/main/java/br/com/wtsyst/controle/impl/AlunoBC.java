@@ -25,4 +25,9 @@ public class AlunoBC implements AlunoBCI {
 		return dao.findAll();
 	}
 
+	@Override
+	public Boolean aprovado(Aluno a) {
+		return a.getNota() >= 7;
+	}
+
 }

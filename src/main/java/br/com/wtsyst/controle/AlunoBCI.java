@@ -10,4 +10,6 @@ public interface AlunoBCI {
 	
 	public List<Aluno> select();
 	
+	public Boolean aprovado(Aluno a);
+	
 }

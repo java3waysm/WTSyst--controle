@@ -19,22 +19,27 @@ public class Aluno {
 	private Integer id;
 	private String nome;
 	private String matricula;
-	private List<Curso> cursos;
+	//private List<Curso> cursos;
+	private Double nota;
 	
-	
-
+	public Double getNota() {
+		return nota;
+	}
+	public void setNota(Double nota) {
+		this.nota = nota;
+	}
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public List<Curso> getCursos() {
+	/*public List<Curso> getCursos() {
 		return cursos;
 	}
 	public void setCursos(List<Curso> cursos) {
 		this.cursos = cursos;
-	}
+	}*/
 	private String apelido;
 	private Date nascimento;
 
