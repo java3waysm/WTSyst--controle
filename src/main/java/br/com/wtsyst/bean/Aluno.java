@@ -16,7 +16,26 @@ public class Aluno {
 	private Integer id;
 	private String nome;
 	private String matricula;
+<<<<<<< HEAD
 	
+=======
+	private String apelido;
+	private Date nascimento;
+
+	public String getApelido() {
+		return apelido;
+	}
+	public void setApelido(String apelido) {
+		this.apelido = apelido;
+	}
+
+	public Date getNascimento() {
+		return nascimento;
+	}
+	public void setNascimento(Date nascimento) {
+		this.nascimento = nascimento;
+	}
+>>>>>>> branch 'master' of https://github.com/java3waysm/WTSyst--controle.git
 	public String getNome() {
 		return nome;
 	}
