@@ -8,6 +8,8 @@ public class Escola {
 	private String nome;
 	private List<Curso> cursos;
 	private String endereco;
+	private Integer mediaAprovacao;
+	
 	public Integer getId() {
 		return id;
 	}

@@ -8,7 +8,16 @@ public class Curso {
 	private String nome;
 	private Professor professor;
 	private List<Aluno> alunos;
+	private Escola escola;
 	
+	
+	
+	public Escola getEscola() {
+		return escola;
+	}
+	public void setEscola(Escola escola) {
+		this.escola = escola;
+	}
 	public Integer getId() {
 		return id;
 	}

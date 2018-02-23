@@ -6,7 +6,15 @@ public class Avaliacao {
 	private Curso curso;
 	private Aluno aluno;
 	private Double nota;
+	private Boolean aprovado;
 	
+	
+	public Boolean getAprovado() {
+		return aprovado;
+	}
+	public void setAprovado(Boolean aprovado) {
+		this.aprovado = aprovado;
+	}
 	public Integer getId() {
 		return id;
 	}

@@ -3,17 +3,19 @@ package br.com.wtsyst.controle;
 import java.util.List;
 
 import br.com.wtsyst.bean.Aluno;
+import br.com.wtsyst.bean.Avaliacao;
 import br.com.wtsyst.bean.Professor;
 
 public interface AvaliacaoBCI {
 
-	public void insert(Professor p);
+	public void insert(Avaliacao a);
 	
-	public void excluir(Professor p);
+	public void excluir(Avaliacao a);
 	
-	public void atualizar(Professor p);
+	public void atualizar(Avaliacao a);
 	
+	public void avaliaResultados(Avaliacao a);
 	
-	public List<Professor> select();
+	public List<Avaliacao> select();
 	
 }
