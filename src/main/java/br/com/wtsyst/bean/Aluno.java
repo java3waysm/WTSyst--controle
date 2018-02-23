@@ -1,5 +1,7 @@
 package br.com.wtsyst.bean;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,9 +18,7 @@ public class Aluno {
 	private Integer id;
 	private String nome;
 	private String matricula;
-<<<<<<< HEAD
-	
-=======
+
 	private String apelido;
 	private Date nascimento;
 
@@ -35,7 +35,6 @@ public class Aluno {
 	public void setNascimento(Date nascimento) {
 		this.nascimento = nascimento;
 	}
->>>>>>> branch 'master' of https://github.com/java3waysm/WTSyst--controle.git
 	public String getNome() {
 		return nome;
 	}
