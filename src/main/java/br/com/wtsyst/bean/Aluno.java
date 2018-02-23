@@ -1,6 +1,7 @@
 package br.com.wtsyst.bean;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,7 +19,22 @@ public class Aluno {
 	private Integer id;
 	private String nome;
 	private String matricula;
+	private List<Curso> cursos;
+	
+	
 
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public List<Curso> getCursos() {
+		return cursos;
+	}
+	public void setCursos(List<Curso> cursos) {
+		this.cursos = cursos;
+	}
 	private String apelido;
 	private Date nascimento;
 
