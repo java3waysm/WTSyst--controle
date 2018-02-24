@@ -11,7 +11,7 @@ import br.com.wtsyst.dao.CursoDaoI;
 public class CursoBC implements CursoBCI {
 
 	
-	/*teste*/
+	/*teste */
 	@Autowired
 	private CursoDaoI dao;
 	
