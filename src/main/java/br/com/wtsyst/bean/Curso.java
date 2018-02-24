@@ -2,22 +2,31 @@ package br.com.wtsyst.bean;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
 
+@Entity
+@SequenceGenerator(name = "seq_curso", sequenceName = "curso_seq", initialValue = 1)
 public class Curso {
 
 	private Integer id;
 	private String nome;
 	
+	@OneToOne
 	private Professor professor;
 	
 	@ManyToMany(fetch = FetchType.LAZY, targetEntity = Aluno.class, mappedBy = "cursos")
 	private List<Aluno> alunos;
-	
+
+	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name = "fk_escola")
 	private Escola escola;
-	
-	
 	
 	public Escola getEscola() {
 		return escola;
