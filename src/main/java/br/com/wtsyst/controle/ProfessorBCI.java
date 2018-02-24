@@ -13,6 +13,5 @@ public interface ProfessorBCI {
 	public void atualizar(Professor a);
 	
 	public List<Professor> select();
-
 	
 }
