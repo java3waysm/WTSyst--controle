@@ -7,7 +7,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 
 @Entity
@@ -19,7 +19,7 @@ public class Escola {
 	private Integer id;
 	private String nome;
 	
-	@ManyToMany(fetch = FetchType.LAZY, targetEntity = Curso.class, mappedBy = "cursos")
+	@OneToMany(fetch = FetchType.LAZY, targetEntity = Curso.class, mappedBy = "cursos")
 	private List<Curso> cursos;
 	private String endereco;
 	private Integer mediaAprovacao;
