@@ -10,7 +10,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
 @Entity
-@SequenceGenerator(name = "seq_avalicao", sequenceName = "avaliacao_seq", initialValue = 1)
+@SequenceGenerator(name = "seq_avaliacao", sequenceName = "avaliacao_seq", initialValue = 1)
 public class Avaliacao {
 	
 	

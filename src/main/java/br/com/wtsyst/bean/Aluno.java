@@ -26,9 +26,7 @@ public class Aluno {
 	
 	private Double nota;
 	
-	
-	
-	
+
 	public Double getNota() {
 		return nota;
 	}
