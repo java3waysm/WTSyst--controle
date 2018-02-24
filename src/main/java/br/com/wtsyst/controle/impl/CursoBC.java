@@ -10,6 +10,8 @@ import br.com.wtsyst.dao.CursoDaoI;
 
 public class CursoBC implements CursoBCI {
 
+	
+	/*teste*/
 	@Autowired
 	private CursoDaoI dao;
 	
