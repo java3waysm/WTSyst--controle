@@ -10,7 +10,7 @@ import br.com.wtsyst.dao.EscolaDaoI;
 
 public class EscolaBC implements EscolaBCI {
 
-	
+	/*teste*/
 	@Autowired
 	private EscolaDaoI dao;
 	
