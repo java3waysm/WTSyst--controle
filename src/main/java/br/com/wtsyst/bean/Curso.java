@@ -17,7 +17,7 @@ public class Curso {
 
 	private Integer id;
 	private String nome;
-	private Integer nota;// se a nota for < 3 o curso fica inválido
+	private Integer nota;// se a nota for < 3 o curso fica inválido - teste
 	private Boolean valido;
 	
 	@OneToOne
