@@ -2,34 +2,40 @@ package br.com.wtsyst.controle.impl;
 
 import java.util.List;
 
-import br.com.wtsyst.bean.Avaliacao;
-import br.com.wtsyst.controle.ProfessorBCI;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
+import br.com.wtsyst.bean.Professor;
+import br.com.wtsyst.controle.ProfessorBCI;
+import br.com.wtsyst.dao.ProfessorDaoI;
+
+@Controller
 public class ProfessorBC implements ProfessorBCI{
 
-	@Override
-	public void insert(Avaliacao a) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void excluir(Avaliacao a) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void atualizar(Avaliacao a) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public List<Avaliacao> select() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	@Autowired
+	private ProfessorDaoI dao;
 	
+	@Override
+	public void insert(Professor e) {
+		dao.save(e);
+		
+	}
+
+	@Override
+	public void excluir(Professor e) {
+		dao.delete(e);
+		
+	}
+
+	@Override
+	public void atualizar(Professor e) {
+		dao.save(e);
+		
+	}
+
+	@Override
+	public List<Professor> select() {
+		return dao.findAll();
+	}
 
 }
