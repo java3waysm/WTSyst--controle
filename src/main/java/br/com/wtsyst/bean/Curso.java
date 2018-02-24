@@ -2,12 +2,19 @@ package br.com.wtsyst.bean;
 
 import java.util.List;
 
+import javax.persistence.FetchType;
+import javax.persistence.ManyToMany;
+
 public class Curso {
 
 	private Integer id;
 	private String nome;
+	
 	private Professor professor;
+	
+	@ManyToMany(fetch = FetchType.LAZY, targetEntity = Aluno.class, mappedBy = "cursos")
 	private List<Aluno> alunos;
+	
 	private Escola escola;
 	
 	
