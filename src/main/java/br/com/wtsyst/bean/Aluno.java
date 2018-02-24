@@ -30,12 +30,12 @@ public class Aluno {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	/*public List<Curso> getCursos() {
+	public List<Curso> getCursos() {
 		return cursos;
 	}
 	public void setCursos(List<Curso> cursos) {
 		this.cursos = cursos;
-	}*/
+	}
 	private String apelido;
 	private Date nascimento;
 

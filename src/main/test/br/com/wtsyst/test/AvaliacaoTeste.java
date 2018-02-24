@@ -21,6 +21,7 @@ public class AvaliacaoTeste {
 	@Autowired
 	private AvaliacaoBCI controle;
 	
+		
 	@Test
 	public void avaliaAprovacao() {
 		Escola e = new Escola();
@@ -38,12 +39,19 @@ public class AvaliacaoTeste {
 		
 		Assert.assertEquals(true, av.getAprovado());
 
-		controle.avaliaResultados(av);
 		av.setNota(4.0);
+		controle.avaliaResultados(av);
 		Assert.assertEquals(false, av.getAprovado());
 		
-		controle.avaliaResultados(av);
 		av.getCurso().getEscola().setMediaAprovacao(3);
+		controle.avaliaResultados(av);
+		Assert.assertEquals(true, av.getAprovado());
+		
+		
+		
+		av.getCurso().getEscola().setMediaAprovacao(7);
+		av.setNota(7.0);
+		controle.avaliaResultados(av);
 		Assert.assertEquals(true, av.getAprovado());
 		
 		
