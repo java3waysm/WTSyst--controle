@@ -4,19 +4,30 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.SequenceGenerator;
 
-
+@Entity
+@SequenceGenerator(name = "seq_aluno", sequenceName = "aluno_seq", initialValue = 1)
 public class Aluno {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_aluno")
 	private Integer id;
 	private String nome;
 	private String matricula;
+	
+	@ManyToMany(fetch = FetchType.LAZY, targetEntity = Curso.class, mappedBy = "alunos")
 	private List<Curso> cursos;
+	
 	private Double nota;
+	
+	
+	
 	
 	public Double getNota() {
 		return nota;
