@@ -2,10 +2,24 @@ package br.com.wtsyst.bean;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+
+@Entity
+@SequenceGenerator(name = "seq_escola", sequenceName = "escola_seq", initialValue = 1)
 public class Escola {
-	
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_escola")	
 	private Integer id;
 	private String nome;
+	
+	@OneToMany(targetEntity = Curso.class, mappedBy = "escola", fetch = FetchType.LAZY)
 	private List<Curso> cursos;
 	private String endereco;
 	private Integer mediaAprovacao;
@@ -18,6 +32,7 @@ public class Escola {
 	public void setMediaAprovacao(Integer mediaAprovacao) {
 		this.mediaAprovacao = mediaAprovacao;
 	}
+	
 	public Integer getId() {
 		return id;
 	}

@@ -1,10 +1,19 @@
 package br.com.wtsyst.bean;
 
+import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
+import javax.persistence.OneToOne;
+
 public class Avaliacao {
 	
 	private Integer id;
+	
+	@OneToOne( fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private Curso curso;
+	
+	@OneToOne( fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private Aluno aluno;
+	
 	private Double nota;
 	private Boolean aprovado;
 	

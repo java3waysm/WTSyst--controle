@@ -10,13 +10,14 @@ import javax.persistence.SequenceGenerator;
 @SequenceGenerator(name = "seq_professor", sequenceName = "professor_seq", initialValue = 1)
 public class Professor {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_professor")
 	private Integer id;
 	private String nome;
 	private String matricula;
 	private String formacao;
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_professor")
+
 	public Integer getId() {
 		return id;
 	}
