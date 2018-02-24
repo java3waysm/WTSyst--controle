@@ -18,13 +18,11 @@ public class ProfessorBC implements ProfessorBCI{
 	@Override
 	public void insert(Professor e) {
 		dao.save(e);
-		
 	}
 
 	@Override
 	public void excluir(Professor e) {
 		dao.delete(e);
-		
 	}
 
 	@Override
