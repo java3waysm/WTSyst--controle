@@ -8,6 +8,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.SequenceGenerator;
 
@@ -21,7 +23,10 @@ public class Aluno {
 	private String nome;
 	private String matricula;
 	
-	@ManyToMany(fetch = FetchType.LAZY, targetEntity = Curso.class, mappedBy = "alunos")
+	@ManyToMany( fetch = FetchType.EAGER)
+	@JoinTable(name = "aluno_curso",
+			joinColumns = { @JoinColumn(name = "aluno_id") }, inverseJoinColumns = {
+					@JoinColumn(name = "curso_id") })
 	private List<Curso> cursos;
 	
 	private Double nota;

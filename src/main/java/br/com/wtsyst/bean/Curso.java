@@ -28,7 +28,7 @@ public class Curso {
 	@OneToOne
 	private Professor professor;
 	
-	@ManyToMany(fetch = FetchType.LAZY, targetEntity = Aluno.class, mappedBy = "cursos")
+	@ManyToMany(mappedBy = "cursos")
 	private List<Aluno> alunos;
 
 	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
