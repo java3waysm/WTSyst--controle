@@ -19,7 +19,7 @@ public class Escola {
 	private Integer id;
 	private String nome;
 	
-	@OneToMany(fetch = FetchType.LAZY, targetEntity = Curso.class, mappedBy = "cursos")
+	@OneToMany(targetEntity = Curso.class, mappedBy = "escola")
 	private List<Curso> cursos;
 	private String endereco;
 	private Integer mediaAprovacao;

@@ -32,7 +32,6 @@ public class Curso {
 	private List<Aluno> alunos;
 
 	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "fk_escola")
 	private Escola escola;
 	
 	
