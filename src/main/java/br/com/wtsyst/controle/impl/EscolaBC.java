@@ -3,11 +3,13 @@ package br.com.wtsyst.controle.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import br.com.wtsyst.bean.Escola;
 import br.com.wtsyst.controle.EscolaBCI;
 import br.com.wtsyst.dao.EscolaDaoI;
 
+@Controller
 public class EscolaBC implements EscolaBCI {
 
 	/*teste*/

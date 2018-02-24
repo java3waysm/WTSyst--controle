@@ -2,7 +2,10 @@ package br.com.wtsyst.controle;
 
 import java.util.List;
 
+import org.springframework.stereotype.Controller;
+
 import br.com.wtsyst.bean.Aluno;
+
 
 public interface AlunoBCI {
 
