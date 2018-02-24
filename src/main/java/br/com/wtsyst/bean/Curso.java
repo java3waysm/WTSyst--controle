@@ -17,6 +17,8 @@ public class Curso {
 
 	private Integer id;
 	private String nome;
+	private Integer nota;// se a nota for < 3 o curso fica inválido
+	private Boolean valido;
 	
 	@OneToOne
 	private Professor professor;
@@ -28,6 +30,19 @@ public class Curso {
 	@JoinColumn(name = "fk_escola")
 	private Escola escola;
 	
+	
+	public Integer getNota() {
+		return nota;
+	}
+	public void setNota(Integer nota) {
+		this.nota = nota;
+	}
+	public Boolean getValido() {
+		return valido;
+	}
+	public void setValido(Boolean valido) {
+		this.valido = valido;
+	}
 	public Escola getEscola() {
 		return escola;
 	}
