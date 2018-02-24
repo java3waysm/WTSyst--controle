@@ -3,11 +3,13 @@ package br.com.wtsyst.controle.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import br.com.wtsyst.bean.Curso;
 import br.com.wtsyst.controle.CursoBCI;
 import br.com.wtsyst.dao.CursoDaoI;
 
+@Controller
 public class CursoBC implements CursoBCI {
 
 	
@@ -36,6 +38,12 @@ public class CursoBC implements CursoBCI {
 	@Override
 	public List<Curso> select() {
 		return dao.findAll();
+	}
+
+	@Override
+	public void avaliaCurso(Curso c) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -12,6 +12,7 @@ public interface CursoBCI {
 	
 	public void atualizar(Curso c);
 	
+	public void avaliaCurso(Curso c);
 	
 	public List<Curso> select();
 	
