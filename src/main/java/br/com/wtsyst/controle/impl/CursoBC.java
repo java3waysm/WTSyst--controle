@@ -40,4 +40,10 @@ public class CursoBC implements CursoBCI {
 		return dao.findAll();
 	}
 
+	@Override
+	public void avaliaCurso(Curso c) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
