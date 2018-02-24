@@ -1,5 +1,13 @@
 package br.com.wtsyst.bean;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+
+@Entity
+@SequenceGenerator(name = "seq_professor", sequenceName = "professor_seq", initialValue = 1)
 public class Professor {
 
 	private Integer id;
@@ -7,6 +15,8 @@ public class Professor {
 	private String matricula;
 	private String formacao;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_professor")
 	public Integer getId() {
 		return id;
 	}
