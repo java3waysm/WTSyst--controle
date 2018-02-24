@@ -17,4 +17,7 @@ public interface ProfessorBCI {
 	
 	public List<Avaliacao> select();
 	
+	
+	public List<Professor> selectProfessor();
+	
 }
