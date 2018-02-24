@@ -9,17 +9,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
-@Entity
-@SequenceGenerator(name = "seq_aluno", sequenceName = "aluno_seq", initialValue = 1, allocationSize = 1)
+
 public class Aluno {
-	/*teste*/
-	@Id
-	@GeneratedValue(strategy = 
-	GenerationType.SEQUENCE, generator = "seq_aluno")
+
 	private Integer id;
 	private String nome;
 	private String matricula;
-	//private List<Curso> cursos;
+	private List<Curso> cursos;
 	private Double nota;
 	
 	public Double getNota() {

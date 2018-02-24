@@ -10,6 +10,14 @@ public class Escola {
 	private String endereco;
 	private Integer mediaAprovacao;
 	
+	
+	
+	public Integer getMediaAprovacao() {
+		return mediaAprovacao;
+	}
+	public void setMediaAprovacao(Integer mediaAprovacao) {
+		this.mediaAprovacao = mediaAprovacao;
+	}
 	public Integer getId() {
 		return id;
 	}
