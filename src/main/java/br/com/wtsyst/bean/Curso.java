@@ -5,6 +5,9 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
@@ -15,6 +18,8 @@ import javax.persistence.SequenceGenerator;
 @SequenceGenerator(name = "seq_curso", sequenceName = "curso_seq", initialValue = 1)
 public class Curso {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_curso")
 	private Integer id;
 	private String nome;
 	
