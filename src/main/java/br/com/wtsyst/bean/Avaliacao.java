@@ -1,11 +1,21 @@
 package br.com.wtsyst.bean;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
 
+@Entity
+@SequenceGenerator(name = "seq_avalicao", sequenceName = "avaliacao_seq", initialValue = 1)
 public class Avaliacao {
 	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_avaliacao")
 	private Integer id;
 	
 	@OneToOne( fetch = FetchType.EAGER, cascade = CascadeType.ALL)
