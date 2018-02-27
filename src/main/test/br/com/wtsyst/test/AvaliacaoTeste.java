@@ -24,19 +24,22 @@ public class AvaliacaoTeste {
 		
 	@Test
 	public void avaliaAprovacao() {
+		
 		Escola e = new Escola();
 		e.setMediaAprovacao(7);
+		
 		Curso c = new Curso();
 		c.setEscola(e);
+		
 		Aluno a = new Aluno();
 		Avaliacao av = new Avaliacao();
 		
 		av.setAluno(a);
 		av.setCurso(c);
+		
+		
 		av.setNota(8.0);
-		
 		controle.avaliaResultados(av);
-		
 		Assert.assertEquals(true, av.getAprovado());
 
 		av.setNota(4.0);
