@@ -20,10 +20,10 @@ public class Avaliacao {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_avaliacao")
 	private Integer id;
 	
-	@OneToOne( fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
+	@OneToOne( fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
 	private Curso curso;
 	
-	@OneToOne( fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
+	@OneToOne( fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
 	private Aluno aluno;
 	
 	private Double nota;
