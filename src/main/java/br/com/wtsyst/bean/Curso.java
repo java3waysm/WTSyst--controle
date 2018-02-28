@@ -33,6 +33,12 @@ public class Curso {
 	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private Escola escola;
 	
+	public Curso() {
+	}
+	public Curso(Integer id) {
+		this.id = id;
+	}
+	
 	
 	public Integer getNota() {
 		return nota;

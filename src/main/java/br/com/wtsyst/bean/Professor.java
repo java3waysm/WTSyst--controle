@@ -17,7 +17,14 @@ public class Professor {
 	private String matricula;
 	private String formacao;
 	
-
+	public Professor() {
+	}
+	public Professor(Integer id) {
+		this.id = id;
+	}
+	
+	
+	
 	public Integer getId() {
 		return id;
 	}

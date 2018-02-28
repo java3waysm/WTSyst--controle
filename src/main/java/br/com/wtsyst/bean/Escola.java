@@ -23,6 +23,14 @@ public class Escola {
 	private String endereco;
 	private Integer mediaAprovacao;
 	
+	
+	public Escola() {
+	}
+
+	public Escola(Integer id) {
+		this.id = id;
+	}
+	
 	public Integer getMediaAprovacao() {
 		return mediaAprovacao;
 	}

@@ -1,5 +1,6 @@
 package br.com.wtsyst.bean;
 
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -8,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
+
 
 @Entity
 @SequenceGenerator(name = "seq_avaliacao", sequenceName = "avaliacao_seq", initialValue = 1)
@@ -26,7 +28,6 @@ public class Avaliacao {
 	
 	private Double nota;
 	private Boolean aprovado;
-	
 	
 	public Boolean getAprovado() {
 		return aprovado;

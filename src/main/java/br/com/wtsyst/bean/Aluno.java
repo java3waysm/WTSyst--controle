@@ -31,6 +31,11 @@ public class Aluno {
 	
 	private Double nota;
 	
+	public Aluno() {
+	}
+	public Aluno(Integer id) {
+		this.id = id;
+	}
 
 	public Double getNota() {
 		return nota;
