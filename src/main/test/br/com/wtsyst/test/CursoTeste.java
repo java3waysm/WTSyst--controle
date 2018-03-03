@@ -25,25 +25,25 @@ public class CursoTeste {
 		
 		Curso c = new Curso();
 		
-		c.setNota(4);
+		c.setNota(4.0);
 		controle.avaliaCurso(c);
 		Assert.assertEquals(true, c.getValido());
 		
 		
-		c.setNota(3);
+		c.setNota(3.0);
 		controle.avaliaCurso(c);
 		Assert.assertEquals(true, c.getValido());
 		
-		c.setNota(2);
+		c.setNota(2.0);
 		controle.avaliaCurso(c);
 		Assert.assertEquals(false, c.getValido());
 		
 		
-		c.setNota(1);
+		c.setNota(1.0);
 		controle.avaliaCurso(c);
 		Assert.assertEquals(false, c.getValido());
 		
-		c.setNota(0);
+		c.setNota(0.0);
 		controle.avaliaCurso(c);
 		Assert.assertEquals(false, c.getValido());
 		

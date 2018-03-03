@@ -2,7 +2,9 @@ package br.com.wtsyst.bean;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -18,10 +20,11 @@ public class Escola {
 	private Integer id;
 	private String nome;
 	
-	@OneToMany(targetEntity = Curso.class, mappedBy = "escola")
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.DETACH, targetEntity = Curso.class, mappedBy = "escola")
 	private List<Curso> cursos;
+	
 	private String endereco;
-	private Integer mediaAprovacao;
+	private Double mediaAprovacao;
 	
 	
 	public Escola() {
@@ -31,10 +34,10 @@ public class Escola {
 		this.id = id;
 	}
 	
-	public Integer getMediaAprovacao() {
+	public Double getMediaAprovacao() {
 		return mediaAprovacao;
 	}
-	public void setMediaAprovacao(Integer mediaAprovacao) {
+	public void setMediaAprovacao(Double mediaAprovacao) {
 		this.mediaAprovacao = mediaAprovacao;
 	}
 	

@@ -13,7 +13,6 @@ public interface EscolaBCI {
 	
 	public void atualizar(Escola e);
 	
-	
 	public List<Escola> select();
 	
 }

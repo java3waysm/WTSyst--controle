@@ -26,7 +26,7 @@ public class AvaliacaoTeste {
 	public void avaliaAprovacao() {
 		
 		Escola e = new Escola();
-		e.setMediaAprovacao(7);
+		e.setMediaAprovacao(7.0);
 		
 		Curso c = new Curso();
 		c.setEscola(e);
@@ -46,13 +46,13 @@ public class AvaliacaoTeste {
 		controle.avaliaResultados(av);
 		Assert.assertEquals(false, av.getAprovado());
 		
-		av.getCurso().getEscola().setMediaAprovacao(3);
+		av.getCurso().getEscola().setMediaAprovacao(3.0);
 		controle.avaliaResultados(av);
 		Assert.assertEquals(true, av.getAprovado());
 		
 		
 		
-		av.getCurso().getEscola().setMediaAprovacao(7);
+		av.getCurso().getEscola().setMediaAprovacao(7.0);
 		av.setNota(7.0);
 		controle.avaliaResultados(av);
 		Assert.assertEquals(true, av.getAprovado());
