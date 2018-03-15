@@ -20,7 +20,7 @@ public class Role {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_role")
 	private Integer id;
 	private String perfil;
-	private String descrição;
+	private String descricao;
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "role_pagina", joinColumns = { @JoinColumn(name = "role_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "pagina_id") })
@@ -44,12 +44,12 @@ public class Role {
 		this.perfil = perfil;
 	}
 
-	public String getDescrição() {
-		return descrição;
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setDescrição(String descrição) {
-		this.descrição = descrição;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
 	public List<Pagina> getPaginas() {
