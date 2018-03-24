@@ -1,7 +1,6 @@
 package br.com.wtsyst.controle.impl;
 
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
@@ -17,22 +16,22 @@ public class CarroBC implements CarroBCI {
 
 	@Autowired
 	private CarroDaoI dao;
-	
+
 	@Override
 	public void insert(Carro c) {
-		dao.save(c);		
+		dao.save(c);
 	}
 
 	@Override
 	public List<Carro> select() {
-		
-		Calendar ini = new GregorianCalendar();
+
+		Calendar init = new GregorianCalendar();
+		init.set(Calendar.YEAR, 1980);
+
 		Calendar fim = new GregorianCalendar();
-		
-		ini.set(Calendar.YEAR, 2008);
-		fim.set(Calendar.YEAR, 2018);
-		
-		return dao.findByNomeAndPessoa_Nome("Cruiz", "Thiago");
+		fim.set(Calendar.YEAR, 1989);
+
+		return dao.findByPessoa_nascimentoBetween(init, fim);
 	}
 
 }
