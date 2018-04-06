@@ -11,10 +11,6 @@ import br.com.wtsyst.bean.Carro;
 //https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
 
 public interface CarroDaoI extends JpaRepository<Carro, Long> {
-
-	 @Query("select c from Carro c where c.nome = ?1 and c.endereco = ?2")
-	 public Carro buscaPorNome(String nome, String endereco);
-	
 	
 	public List<Carro> findByNome(String s);
 	

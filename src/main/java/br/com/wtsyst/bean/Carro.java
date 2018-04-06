@@ -1,7 +1,6 @@
 package br.com.wtsyst.bean;
 
 import java.util.Calendar;
-import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -21,6 +20,7 @@ public class Carro {
 	private String nome;
 	private Calendar ano;
 	private String cor;
+	
 	@OneToOne(cascade = CascadeType.ALL)
 	private Pessoa pessoa;
 	
